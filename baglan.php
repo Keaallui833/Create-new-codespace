@@ -1,12 +1,20 @@
 <?php
-$host = "kopyaladığın_mysqlhost_buraya";
-$kullanici = "root"; // veya oradaki user
-$sifre = "o_uzun_sifre_buraya";
-$veritabani = "railway"; // veya oradaki database adı
 
+// Railway 'Variables' sekmesinden kopyaladığın bilgileri buraya yaz:
+$host       = "kopyaladığın_MYSQLHOST_buraya";      // Örn: mysql.railway.internal
+$kullanici  = "root";                               // Genelde root olur, MYSQLUSER'a bak
+$sifre      = "kopyaladığın_MYSQLPASSWORD_buraya";  // O uzun karışık şifre
+$veritabani = "railway";                            // MYSQLDATABASE kısmındaki isim
+
+// Bağlantıyı kuruyoruz
 $baglan = mysqli_connect($host, $kullanici, $sifre, $veritabani);
 
+// Bağlantı kontrolü - Eğer hata varsa ekrana yazar
 if (!$baglan) {
-    die("Bağlantı hatası: " . mysqli_connect_error());
+    die("Veritabanı bağlantısı başarısız: " . mysqli_connect_error());
 }
+
+// Türkçe karakter sorunu olmasın diye
+mysqli_set_charset($baglan, "utf8");
+
 ?>
