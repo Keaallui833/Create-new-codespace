@@ -1,3 +1,4 @@
+<?php include 'baglan.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
