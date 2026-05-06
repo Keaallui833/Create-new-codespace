@@ -1,15 +1,12 @@
 <?php
-// Kemal SMM Veritabanı Bağlantı Ayarları
-$host = "localhost"; // Sunucu adresi (Codespace için genelde budur)
-$user = "root";      // Kullanıcı adı
-$pass = "";          // Şifre (Şu anlık boş bırakıyoruz)
-$db   = "smm_panel"; // Veritabanı adı
+$host = "kopyaladığın_mysqlhost_buraya";
+$kullanici = "root"; // veya oradaki user
+$sifre = "o_uzun_sifre_buraya";
+$veritabani = "railway"; // veya oradaki database adı
 
-// Bağlantıyı Kuruyoruz
-$baglanti = mysqli_connect($host, $user, $pass, $db);
+$baglan = mysqli_connect($host, $kullanici, $sifre, $veritabani);
 
-// Hata kontrolü
-if (!$baglanti) {
-    die("Bağlantı başarısız abi: " . mysqli_connect_error());
+if (!$baglan) {
+    die("Bağlantı hatası: " . mysqli_connect_error());
 }
 ?>
