@@ -1,13 +1,23 @@
-<?php
-echo "<body style='background:#121212; color:white; text-align:center; font-family:sans-serif; padding-top:50px;'>";
-echo "<h1 style='color:#007bff;'>🚀 Kemal SMM Panele Hoş Geldiniz</h1>";
-echo "<p style='font-size:1.2em;'>İnegöl'ün En Hızlı Sosyal Medya Bayi Paneli!</p>";
-echo "<br>";
-echo "<div style='border:2px solid #007bff; padding:30px; display:inline-block; border-radius:15px; background:#1e1e1e;'>";
-echo "<h3>Müşteri Paneli</h3>";
-echo "<input type='text' placeholder='Kullanıcı Adı' style='padding:10px; border-radius:5px; border:none;'><br><br>";
-echo "<input type='password' placeholder='Şifre' style='padding:10px; border-radius:5px; border:none;'><br><br>";
-echo "<button style='background:#007bff; color:white; border:none; padding:12px 25px; border-radius:5px; cursor:pointer; font-weight:bold;'>Sisteme Giriş Yap</button>";
-echo "<p style='font-size:0.8em; color:#888; margin-top:15px;'>© 2026 Kemal SMM - Tüm Hakları Saklıdır.</p>";
-echo "</div></body>";
-?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kemal SMM Panel</title>
+    <meta charset="utf-8">
+    <style>
+        body { background-color: #121212; color: white; font-family: Arial; text-align: center; padding-top: 100px; }
+        .box { border: 2px solid #007bff; padding: 40px; display: inline-block; border-radius: 10px; background-color: #1e1e1e; }
+        input { padding: 10px; margin: 10px 0; width: 200px; border-radius: 5px; border: none; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>🚀 Kemal SMM Giriş</h2>
+        <form action="dashboard.php" method="POST">
+            <input type="text" name="kullanici" placeholder="Kullanıcı Adı" required><br>
+            <input type="password" name="sifre" placeholder="Şifre" required><br>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+</body>
+</html>
